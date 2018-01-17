@@ -35,6 +35,12 @@ Dynamically build categories list in the sidebar using a loop (`yarn add lodash`
 - Add PropTypes to verify props:
     - `yarn add prop-types`
 
+## Step 3 - Components lifecycle and AJAX calls
+
+- Sidebar gets Categories as props
+- Call API to get categories when App is ready
+- Sidebar selects category by id and App uses the ID to retrieve the correct one to pass to Page
+
 ## Info
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

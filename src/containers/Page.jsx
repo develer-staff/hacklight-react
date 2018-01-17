@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 
 class Page extends React.Component {
     render() {
+        const { selectedCategory} = this.props;
         return (
             <section className="section">
-                <h1 className="title">Posts in the category "{this.props.selectedCategory}"</h1>
+                <h1 className="title">Posts in the category "{selectedCategory && selectedCategory.title}"</h1>
                 <div className="box">
                     <article className="media">
                         <div className="media-content">
@@ -38,7 +39,10 @@ class Page extends React.Component {
 }
 
 Page.propTypes = {
-    selectedCategory: PropTypes.string,
+    selectedCategory: PropTypes.shape({
+        id: PropTypes.number,
+        title: PropTypes.string,
+    }),
 };
 
 export default Page;
