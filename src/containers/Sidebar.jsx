@@ -1,7 +1,8 @@
 import React from "react";
 import _ from "lodash";
+import PropTypes from 'prop-types'
 
-export default class extends React.Component {
+class Sidebar extends React.Component {
     render() {
         return (
             <section className="section">
@@ -28,10 +29,20 @@ export default class extends React.Component {
         }];
 
         return _.map(categories, c => (
-            <a key={c.id} className="panel-block is-active">
+            <a key={c.id} onClick={this.setCategory.bind(this, c.title)} className="panel-block is-active">
                 <span className="panel-icon"><i className="fa fa-book"></i></span>
                 {c.title}
             </a>
         ));
     }
+
+    setCategory(title, e) {
+        this.props.onSelectCategory(title);
+    }
 }
+
+Sidebar.propTypes = {
+    onSelectCategory: PropTypes.func.isRequired,
+};
+
+export default Sidebar;

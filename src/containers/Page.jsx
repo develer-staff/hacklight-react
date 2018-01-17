@@ -1,10 +1,11 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
-export default class extends React.Component {
+class Page extends React.Component {
     render() {
         return (
             <section className="section">
-                <h1 className="title">Posts in the category</h1>
+                <h1 className="title">Posts in the category "{this.props.selectedCategory}"</h1>
                 <div className="box">
                     <article className="media">
                         <div className="media-content">
@@ -35,3 +36,9 @@ export default class extends React.Component {
         );
     }
 }
+
+Page.propTypes = {
+    selectedCategory: PropTypes.string,
+};
+
+export default Page;

@@ -25,6 +25,16 @@ Dynamically build categories list in the sidebar using a loop (`yarn add lodash`
 - Use variables inside JSX code: `<div>{jsVal}</div>`
 - Use `key` attr inside loops
 
+## Step 2 - Add state
+
+- Add state to App.js to hold the selected category
+- Pass a function to set it as prop to sidebar
+    - use the `bind` in sidebar to correctly use `this`
+    - use `setState`
+- Pass the value to `Page` and display it
+- Add PropTypes to verify props:
+    - `yarn add prop-types`
+
 ## Info
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
