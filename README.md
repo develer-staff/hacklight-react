@@ -16,6 +16,15 @@ yarn start
 
 Then remove `App.css`, `logo.svg` and their references in `App.js`, empty `index.css`.
 
+## Step 1 - Split code into components
+
+Add `containers/Page.jsx` and `containers/Sidebar.jsx` splitting the code in `App.js`.
+
+Dynamically build categories list in the sidebar using a loop (`yarn add lodash`).
+
+- Use variables inside JSX code: `<div>{jsVal}</div>`
+- Use `key` attr inside loops
+
 ## Info
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
