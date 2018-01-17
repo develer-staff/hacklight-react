@@ -7,6 +7,15 @@ yarn install
 yarn start
 ```
 
+## Step 0 - UI
+
+```
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+```
+
+Then remove `App.css`, `logo.svg` and their references in `App.js`, empty `index.css`.
+
 ## Info
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
